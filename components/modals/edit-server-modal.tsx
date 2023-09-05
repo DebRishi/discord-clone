@@ -75,14 +75,9 @@ export const EditServerModal = () => {
 			console.log(error);
 		}
 	}
-    
-    const handleClose = () => {
-        form.reset();
-        onClose();
-    }
 
 	return (
-		<Dialog open={isModelOpen} onOpenChange={handleClose}>
+		<Dialog open={isModelOpen} onOpenChange={onClose}>
 			<DialogContent className="bg-white text-black p-0 overflow-hidden">
 				<DialogHeader className="pt-8 px-6">
 					<DialogTitle className="text-2xl text-center font-bold">
