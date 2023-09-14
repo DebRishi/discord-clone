@@ -4,10 +4,12 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci --production
+RUN npm ci
 
 COPY ./ ./
 
+RUN npx prisma generate
+
 RUN npm run build
 
-CMD npn run start
+CMD ["npm", "run", "start"]
